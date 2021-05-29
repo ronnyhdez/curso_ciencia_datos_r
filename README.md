@@ -1,10 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ¡Bienvenido al curso de ciencia de datos con R\!
+# ¡Bienvenido al curso de ciencia de datos con R!
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 Este es un curso libre y gratis que puede usar para dar sus primeros
@@ -13,14 +12,14 @@ pasos con el lenguaje de programación R.
 ![Artwork by @allison\_horst](img/code_hero.jpg) *Artwork by
 @allison\_horst*
 
------
+------------------------------------------------------------------------
 
 ## Materiales del curso
 
 | Sesión                             | Presentación                                                                                                                                                             | Video                                         |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------- |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | 0-Preparación                      | No hay                                                                                                                                                                   | <https://www.youtube.com/watch?v=NCvJwJSMq60> |
-| 1- Introducción a las herramientas | [sesion\_01](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Introducci%C3%B3n%20al%20an%C3%A1lisis%20y%20manejo%20de%20datos%20con%20R.pdf) | Por subir                                     |
+| 1- Introducción a las herramientas | [sesion\_01](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Introducci%C3%B3n%20al%20an%C3%A1lisis%20y%20manejo%20de%20datos%20con%20R.pdf) | <https://www.youtube.com/watch?v=OI978h2y9-A> |
 
 ## Continuar en el camino
 
@@ -31,17 +30,17 @@ automatizar procesos.
 
 Algunos materiales que recomiendo:
 
-  - [R para ciencia de datos](https://es.r4ds.hadley.nz/)
-  - [Ciencia de datos para gente
+-   [R para ciencia de datos](https://es.r4ds.hadley.nz/)
+-   [Ciencia de datos para gente
     sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/)
-  - [Hojas de
+-   [Hojas de
     referencia](https://www.rstudio.com/resources/cheatsheets/)
 
------
+------------------------------------------------------------------------
 
 ## Autor
 
-¡Hola\! Yo soy Ronny y he estado en el mundo de la ciencia de datos
+¡Hola! Yo soy Ronny y he estado en el mundo de la ciencia de datos
 gracias a la ayuda de muchas personas, así que mi forma de retornar un
 poco de esto es compartiendo lo que he aprendido y sigo aprendiendo en
 el camino.
