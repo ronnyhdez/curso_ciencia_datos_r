@@ -20,6 +20,7 @@ pasos con el lenguaje de programación R.
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | 0-Preparación                      | No hay                                                                                                                                                                   | <https://www.youtube.com/watch?v=NCvJwJSMq60> |
 | 1- Introducción a las herramientas | [sesion\_01](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Introducci%C3%B3n%20al%20an%C3%A1lisis%20y%20manejo%20de%20datos%20con%20R.pdf) | <https://www.youtube.com/watch?v=OI978h2y9-A> |
+| 1- Introducción a las herramientas | [sesion\_02](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2002.pdf)                                                                | <https://youtu.be/vOyDVmVyKwQ>                |
 
 ## Continuar en el camino
 
