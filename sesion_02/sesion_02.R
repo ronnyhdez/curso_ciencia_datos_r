@@ -1,4 +1,4 @@
-# Sesión 01: Introducción a R
+# Sesión 02: Estructuras de datos en R
 ## Ronny Hernández-mora
 ## ronny.hernandezm@gmail.com
 
