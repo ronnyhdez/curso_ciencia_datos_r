@@ -1,0 +1,36 @@
+---
+title: "Práctica"
+author: "Ronny Hernández-mora"
+date: "6/8/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Presentación
+
+Yo soy **Ronny Hernández Mora** y me gusta trabajar con *datos*
+
+Si querés seguirme en redes sociales, podés hacerlo por mi cuenta de
+[twitter](https://twitter.com/RonnyHdezM)
+
+## Actividades que me gustan
+
+Cuando no estoy en la computadora, me gusta: 
+
+ - Leer libros
+ - Andar en bicicleta
+ - Jugar con arduinos (aunque estoy implica estar en la compu)
+
+## Cursos que he tomado
+
+Durante mi carrera profesional, he tomado los siguientes cursos:
+
+| Curso | Del 1 al 5 qué tanto me gustó |
+| ----- | ----------------------------- |
+| Estadística | 4 |
+| Administración de servidores linux | 5 |
+| Fisiología vegetal | 5 |
+| Ecologia vegetal | 5 |

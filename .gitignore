@@ -39,3 +39,4 @@ vignettes/*.pdf
 .Renviron
 videos/
 *.mp4
+*.html
