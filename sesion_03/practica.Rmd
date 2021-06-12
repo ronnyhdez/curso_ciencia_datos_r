@@ -1,0 +1,39 @@
+---
+title: "Mi práctica"
+author: "Ronny Hernández Mora"
+date: "6/9/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+# Mi primer título
+
+Este es un párrafo. Esto es **negrita**, esto es *cursiva*.
+
+## Vectores
+
+Vectores solo pueden tener una clase de datos.
+
+```{r primero, eval = TRUE}
+mi_vector <- c(1, 2, 3)
+mi_vector_caracteres <- c("una", "ciencia_datos", "R")
+mi_vector_logico <- c(TRUE, FALSE, TRUE, TRUE, FALSE)
+
+mi_vector
+```
+
+## Creando un gráfico
+
+Para crear gráficos con base R, utilizar la sintáxis de base R
+con el símbolo `$` para llamar las variables.
+
+Tal como se muestra en el ejemplo siguiente:
+
+```{r segundo, echo = TRUE}
+plot(x = iris$Sepal.Length, y = iris$Sepal.Width)
+```
+
