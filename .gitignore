@@ -40,3 +40,5 @@ vignettes/*.pdf
 videos/
 *.mp4
 *.html
+datos/Universidad Nacional Evaluación Desempeño Docente-Estudiantado.xlsx
+datos/evaluacion.feather
