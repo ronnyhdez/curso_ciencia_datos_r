@@ -1,0 +1,126 @@
+---
+title: "Importar datos"
+author: "Ronny Hernández Mora"
+date: "6/16/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Paquetes
+library(readr)
+library(readxl)
+library(dplyr)
+library(janitor)
+library(feather)
+library(tictoc)
+```
+
+# Importar datos
+
+```{r}
+nombres <- read_csv("datos/nombres.csv") 
+```
+
+```{r}
+comentario <- read_csv("datos/comentario.csv",
+                       skip = 1)
+```
+
+```{r}
+# Camino deseado
+filas <- read_csv("datos/filas.csv")
+
+# Caminos no deseados
+# filas <- read_csv("/home/ronny/Desktop/filas.csv")
+# filas <- read_csv("/home/ronny/Desktop/otra_carpeta/datos/filas.csv")
+```
+
+```{r}
+encabezado <- read_csv("datos/encabezado.csv",
+                       col_names = c("variable", "valores"))
+```
+
+```{r}
+filas <- read_csv("datos/filas.csv")
+```
+
+# Importar datos Evaluacion docente UNA
+
+Estos pueden ser datos pesados para leer. Proceder con precaución
+```{r}
+evaluacion <- read_xlsx("datos/Universidad Nacional Evaluación Desempeño Docente-Estudiantado.xlsx")
+```
+
+## Doma de datos
+
+Uso de funciones del paquete `dplyr`
+```{r}
+# Sin usar el pipe
+clean_names(iris)
+
+# Asignando a objeto y usando pipe
+iris_limpio <- iris %>% 
+  clean_names()
+```
+
+```{r}
+setosa <- iris_limpio %>% 
+  filter(species  == "setosa")
+```
+
+```{r}
+species <- iris_limpio %>% 
+  select(species, sepal_length)
+```
+
+## Práctica
+
+```{r}
+## conjunto de datos con filtro de sepal_length mayor a 6 con unicamente
+## columna de species y sepal_length
+
+```
+
+```{r}
+una <- iris_limpio %>% 
+  mutate(mi_nueva_columna = "UNA") %>% 
+  mutate(suma_columnas = petal_width + sepal_width)
+```
+
+```{r}
+iris_limpio %>% 
+  select(species) %>% 
+  distinct()
+```
+
+```{r}
+agrupado <- iris_limpio %>% 
+  group_by(species) %>% 
+  summarise(
+    promedio = mean(petal_width)
+  )
+```
+
+## Exportar archivos
+
+Una forma de exportar archivos en un formato que es más rápido para leer en
+una sesión de R:
+
+```{r}
+write_feather(evaluacion, "datos/evaluacion.feather")
+```
+
+Comparación de tiempos leyendo los mismos datos pero en formato `.xlsx` y
+en formato `.feather`
+```{r}
+tic()
+evaluacion <- read_xlsx("datos/Universidad Nacional Evaluación Desempeño Docente-Estudiantado.xlsx")
+toc()
+
+tic()
+evaluacion_feather <- read_feather("datos/evaluacion.feather")
+toc()
+```
+
