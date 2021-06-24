@@ -1,0 +1,89 @@
+---
+title: "Untitled"
+author: "Ronny Hernández Mora"
+date: "6/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(hflights)
+library(tibble)
+library(tidyr)
+library(dplyr)
+library(janitor)
+library(lubridate)
+```
+
+
+```{r}
+datos_tidy <- data.frame(
+  curso = c("mate", "arte", "compu"),
+  fecha = c("2020-05-28", "2020-06-04", "2020-06-12"),
+  calificacion = c("excelente", "regular", "bueno"),
+  estudiantes = c(34, 20, 28)
+)
+```
+
+
+```{r}
+datos_desordenados <- datos_tidy %>% 
+  pivot_wider(curso, 
+              names_from = calificacion, 
+              values_from = estudiantes)
+```
+
+
+```{r}
+datos_ordenados <- datos_desordenados %>% 
+  pivot_longer(-curso,
+               names_to = "calificacion",
+               values_to = "total_estudiantes",
+               values_drop_na = TRUE)
+```
+
+unir
+```{r}
+unidos <- datos_ordenados %>% 
+  unite(col = "nueva_columna",
+        calificacion:total_estudiantes,
+        sep = "/")
+```
+
+separar
+```{r}
+separado <- unidos %>% 
+  separate(col = nueva_columna,
+           into = c("calificacion", "estudiantes"),
+           sep = "/")
+```
+
+# Fechas
+
+```{r}
+vuelos <- hflights %>% 
+  clean_names() %>% 
+  unite(col = "fecha",
+        year:dayof_month,
+        sep = "-") %>% 
+  mutate(fecha = ymd(fecha))
+```
+
+```{r}
+class("2021-06-24")
+
+class(ymd("2021-06-24"))
+
+year("2021-06-24")
+
+month("2021-06-24")
+```
+
+```{r}
+intervalo <- interval(ymd("2011-01-01"), ymd("2011-02-28"))
+
+filtro_intervalo <- vuelos %>% 
+  filter(fecha %within% intervalo)
+```
+
+
