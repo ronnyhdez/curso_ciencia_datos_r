@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Datos ordenados y fechas"
 author: "Ronny Hernández Mora"
 date: "6/23/2021"
 output: html_document
@@ -15,6 +15,11 @@ library(janitor)
 library(lubridate)
 ```
 
+# Datos ordenados
+
+Esto viene del concepto de `tidy data`
+
+## Crear data frame de ejemplo
 
 ```{r}
 datos_tidy <- data.frame(
@@ -25,6 +30,7 @@ datos_tidy <- data.frame(
 )
 ```
 
+## Usar funciones `pivot_wider` y `pivot_longer`
 
 ```{r}
 datos_desordenados <- datos_tidy %>% 
@@ -42,7 +48,10 @@ datos_ordenados <- datos_desordenados %>%
                values_drop_na = TRUE)
 ```
 
-unir
+## Uso de funciones `unite` y `separate`
+
+Unir columnas:
+
 ```{r}
 unidos <- datos_ordenados %>% 
   unite(col = "nueva_columna",
@@ -50,7 +59,8 @@ unidos <- datos_ordenados %>%
         sep = "/")
 ```
 
-separar
+Separar columnas:
+
 ```{r}
 separado <- unidos %>% 
   separate(col = nueva_columna,
@@ -59,6 +69,8 @@ separado <- unidos %>%
 ```
 
 # Fechas
+
+## Pasos para ordenar conjunto de datos y obtener variable de fecha
 
 ```{r}
 vuelos <- hflights %>% 
@@ -69,6 +81,8 @@ vuelos <- hflights %>%
   mutate(fecha = ymd(fecha))
 ```
 
+## Clases de fechas y ejemplos con `lubridate`
+
 ```{r}
 class("2021-06-24")
 
@@ -78,6 +92,8 @@ year("2021-06-24")
 
 month("2021-06-24")
 ```
+
+## Intervalos
 
 ```{r}
 intervalo <- interval(ymd("2011-01-01"), ymd("2011-02-28"))
