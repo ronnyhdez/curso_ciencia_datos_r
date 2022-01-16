@@ -1,6 +1,7 @@
 # Sesión 02: Estructuras de datos en R
 ## Ronny Hernández-mora
 ## ronny.hernandezm@gmail.com
+## https://ronnyale.com/
 
 # Estructuras de datos ----
 

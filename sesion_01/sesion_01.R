@@ -1,6 +1,7 @@
 # Sesión 01: Introducción a R
 ## Ronny Hernández-mora
 ## ronny.hernandezm@gmail.com
+## https://ronnyale.com/
 
 # Objetos en R ----
 2 + 2
