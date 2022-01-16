@@ -24,6 +24,7 @@ pasos con el lenguaje de programación R.
 | 3-Introducción a Rmarkdown                | [sesion\_03](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2003.pdf)                                                                | <https://youtu.be/ZTmDZ8KmvsY>                |
 | 4-Importar y domar datos con el tidyverse | [sesion\_04](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2004.pdf)                                                                | <https://youtu.be/6I8t7gRIWDY>                |
 | 5-Datos ordenados y fechas en R           | [sesion\_05](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2005.pdf)                                                                | <https://youtu.be/TVe3JeANpKU>                |
+| 6-Visualización de datos con ggplot2      | [sesion\_06](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2005.pdf)                                                                | <https://www.youtube.com/watch?v=aGBQDfS99hk> |
 
 ## Continuar en el camino
 
@@ -52,4 +53,4 @@ el camino.
 Soy [instructor certificado por
 RStudio](https://education.rstudio.com/trainers/people/hernandez+ronny/)
 y si querés saber un poco más de mí, podés visitar [mi
-página](http://ronnyhdez.rbind.io/)
+página](https://ronnyale.com/)

@@ -1,0 +1,114 @@
+---
+title: "Visualización de datos"
+author: "Ronny A. Hernández Mora"
+date: "6/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+library(ggplot2)
+```
+
+# Probar el paquete ggplot2
+
+```{r}
+ggplot(data = mpg, aes(x = displ, y = cyl)) +
+  geom_point(color = "blue") +
+  theme_light(base_size = 16)
+```
+
+## Ejercicios
+
+1- Cambiar de color los puntos
+2- cambiar de forma los puntos (que no sea circular)
+3- Cambiar el tema del grafico
+4- Cambiar los nombres de los ejes
+5- Ponerle un titulo al grafico
+
+# Graficar una variable continua
+
+```{r}
+ggplot(data = mpg, aes(x = displ)) +
+  geom_histogram(bins = 6, fill = "#EB8646")
+```
+
+# Graficar una variable discreta
+
+```{r}
+ggplot(data = mpg, aes(x = class)) +
+  geom_bar()
+```
+
+# Graficar dos variables x & y continuas
+
+```{r}
+grafico <- ggplot(data = mpg, aes(x = displ, y = cyl)) 
+
+grafico + 
+  geom_point()
+
+grafico +
+  geom_smooth()
+
+grafico +
+  geom_line()
+```
+
+# Hacer resumenes de datos y graficar
+
+```{r}
+mpg %>% 
+  group_by(manufacturer) %>% 
+  summarise(
+    maximo_cilindraje = max(cyl)
+  ) %>% 
+  ggplot(aes(x = reorder(manufacturer, maximo_cilindraje),
+             y = maximo_cilindraje)) +
+  geom_col(fill = "#EA904F") +
+  coord_flip() +
+  labs(x = "Manufacturador",
+       y = "Máximo cilindraje",
+       title = "Máximos de cilindrajes por manufacturador",
+       subtitle = "De acuerdo a datos en mpg",
+       caption = "Curso ciencia de datos") +
+  theme_minimal(base_size = 16)
+```
+
+## Grafico con tres variables
+
+Agrupado por manufacturador, clase y cilindraje
+
+```{r}
+grafico_barras <- mpg %>% 
+  group_by(manufacturer, class) %>% 
+  summarise(
+    promedio = mean(cyl),
+    total = n()
+  ) %>% 
+  ggplot(aes(x = manufacturer, y = total, fill = class)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_viridis_d() +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, h = 1)) +
+  labs(x = "Manufacturador",
+       y = "Total", 
+       fill = "Clase")
+```
+
+## Extra: Gráficos interactivos
+
+Con la librería `plotly` podemos de manera sencilla darle interactividad a 
+nuestros gráficos construidos con `ggplot2`. Esto funcionará únicamente si
+el output final del archivo `Rmd` es `html`
+
+```{r}
+# Interactividad con plotly
+library(plotly)
+
+ggplotly(grafico_barras)
+```
+
+
