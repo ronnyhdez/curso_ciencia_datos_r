@@ -14,6 +14,11 @@ knitr::opts_chunk$set(
 # ¡Bienvenido al curso de ciencia de datos con R! 
 
 <!-- badges: start -->
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10867036.svg)](https://doi.org/10.5281/zenodo.10867036)
+
+
 <!-- badges: end -->
 
 Este es un curso libre y gratis que puede usar para dar sus primeros pasos
@@ -34,7 +39,7 @@ con el lenguaje de programación R.
 | 3-Introducción a Rmarkdown | [sesion_03](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2003.pdf) | https://youtu.be/ZTmDZ8KmvsY |
 | 4-Importar y domar datos con el tidyverse | [sesion_04](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2004.pdf) | https://youtu.be/6I8t7gRIWDY |
 | 5-Datos ordenados y fechas en R | [sesion_05](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2005.pdf) | https://youtu.be/TVe3JeANpKU |
-| 6-Visualización de datos con ggplot2 | [sesion_06](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2005.pdf) | https://www.youtube.com/watch?v=aGBQDfS99hk |
+| 6-Visualización de datos con ggplot2 | [sesion_06](https://github.com/ronnyhdez/curso_ciencia_datos_r/blob/main/presentaciones/Sesion%2006.pdf) | https://www.youtube.com/watch?v=aGBQDfS99hk |
 
 ## Continuar en el camino
 
